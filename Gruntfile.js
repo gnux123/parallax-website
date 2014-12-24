@@ -154,7 +154,10 @@ module.exports = function (grunt) {
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
                 relativeAssets: false,
-                assetCacheBuster: false
+                assetCacheBuster: false,
+                require: ['susy','breakpoint','sass-globbing'],
+                noLineComments: true,
+                outputStyle: 'compressed'
             },
             dist: {
                 options: {
@@ -163,7 +166,7 @@ module.exports = function (grunt) {
             },
             server: {
                 options: {
-                    debugInfo: true
+                    debugInfo: false
                 }
             }
         },
